@@ -1,0 +1,4 @@
+[project]
+src = "src"
+
+# You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html
