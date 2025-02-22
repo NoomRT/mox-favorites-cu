@@ -1,14 +1,3 @@
-from src import favorites
-
-def deploy():
-    breakpoint()
-    favorites_contract = favorites.deploy()
-    starting_number = favorites_contract.retrieve()
-    print(f"Starting number is: {starting_number}")
-
-def maccasin_main():
-    deploy()
-
 # pragma version 0.4.0
 # @license MIT
 
