@@ -1,7 +1,7 @@
 from script.deploy import deploy_favorites
 import pytest 
 
-@pytest.fixure(scope="session")
+@pytest.fixure(scope="function")
 def favorites_contract():
     favorites_contract = deploy_favorites()
     return favorites_contract
