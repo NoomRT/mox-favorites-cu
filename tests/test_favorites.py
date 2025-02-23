@@ -1,23 +1,13 @@
-from script.deploy import deploy_favorites
-import pytest 
-
-@pytest.fixture(scope="session")
-def favorites_contract():
-    favorites_contract = deploy_favorites()
-    return favorites_contract
-
-# favorites_contract
-
-def test_starting_values(favorites_contract): # Ok! let's grab the contract, we already deployed!
+def test_starting_values(favorites_contract):
     assert favorites_contract.retrieve() == 77
 
-def test_can_change_values(favorites_contract): # Ok! let's grab the contract, we already deployed!
+def test_can_change_values(favorites_contract):
     # Act
     favorites_contract.store(42)
     # Assert
     assert favorites_contract.retrieve() == 42
 
-def test_can_add_people(favorites_contract): # Ok! let's grab the contract, we already deployed!
+def test_can_add_people(favorites_contract):
     # Arrange
     new_person = "Becca"
     favorites_number = 16
